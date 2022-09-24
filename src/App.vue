@@ -1,15 +1,16 @@
 <template>
-  <div>hi</div>
-  <Shane/>
+  <div>
+    导航栏 |
+    <router-link to='/'>Shane</router-link> |
+    <router-link to='/xxx'>Shane2</router-link>
+  </div>
+  <hr />
+  <router-view />
 </template>
 
 <script>
-import Shane from './components/Shane.vue'
 
 export default {
   name: 'App',
-  components: {
-    Shane
-  }
 }
 </script>
