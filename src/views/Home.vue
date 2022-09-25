@@ -5,8 +5,8 @@
       <h1>蜜蜂UI</h1>
       <h2>一个厉害的 UI 框架</h2>
       <p class='actions'>
-        <a>GitHub</a>
-        <a>开始</a>
+        <a href='https://github.com'>GitHub</a>
+        <router-link to='/doc'>开始</router-link>
       </p>
     </div>
   </div>
@@ -33,7 +33,6 @@ export default {
     padding: 8px 0;
 
     a {
-      border: 1px solid red;
       margin: 0 8px;
       background: #fff;
       display: inline-block;
