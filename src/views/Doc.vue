@@ -3,7 +3,7 @@
     <Topnav />
     <div class='content'>
       <aside>
-      <h2>组件列表</h2>
+        <h2>组件列表</h2>
         <ol>
           <li>
             <router-link to=''>
@@ -34,25 +34,27 @@
 
 <script lang='ts'>
 import Topnav from '../components/Topnav.vue';
+
 export default {
-  components: { Topnav }
+  components: { Topnav },
 }
 </script>
 
 <style lang='scss' scoped>
-aside{
-  border: 1px solid red;
+aside {
   background: lightblue;
   width: 150px;
-  padding: 16px;
+  padding:  70px 16px 16px 16px;
   position: fixed;
   top: 0;
   left: 0;
+
   > h2 {
     margin-bottom: 4px;
   }
-  > ol{
-    > li{
+
+  > ol {
+    > li {
       padding: 4px 0;
     }
   }
