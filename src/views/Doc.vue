@@ -49,7 +49,6 @@ export default {
 
 <style lang='scss' scoped>
 .layout {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   height: 100vh;
