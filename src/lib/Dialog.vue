@@ -7,13 +7,12 @@
     <div class='honeybee-dialog-wrapper'>
       <div class='honeybee-dialog'>
         <header>
-          标题
+          <slot name='title' />
           <span
             @click='close' class='honeybee-dialog-close'></span>
         </header>
         <main>
-          <p>第一行字</p>
-          <p>第二行字</p>
+          <slot name='content' />
         </main>
         <footer>
           <Button
@@ -45,11 +44,11 @@ export default {
       default: true,
     },
     ok: {
-      type: Function
+      type: Function,
     },
     cancel: {
-      type: Function
-    }
+      type: Function,
+    },
   },
   components: { Button },
   setup(props, context) {
@@ -62,9 +61,9 @@ export default {
       }
     }
     const ok = () => {
-     if(props.ok?.() !== false) {
-       close()
-     }
+      if (props.ok?.() !== false) {
+        close()
+      }
     }
     const cancel = () => {
       context.emit('cancel')
