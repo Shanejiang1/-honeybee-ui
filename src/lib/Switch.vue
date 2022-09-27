@@ -1,7 +1,8 @@
 <template>
   <button
+    class='honeybee-switch'
     @click='toggle'
-    :class='{checked: value}'
+    :class='{"honeybee-checked": value}'
   >
     <span></span>
   </button>
@@ -22,10 +23,10 @@ export default {
 }
 </script>
 
-<style lang='scss' scoped>
+<style lang='scss'>
 $h: 22px;
 $h2: $h - 4px;
-button {
+.honeybee-switch {
   height: $h;
   width: $h*2;
   border: none;
@@ -44,7 +45,7 @@ button {
     transition: all 250ms;
   }
 
-  &.checked {
+  &.honeybee-checked {
     background: #1890ff;
 
     > span {
@@ -62,7 +63,7 @@ button {
     }
   }
 
-  &.checked:active {
+  &.honeybee-checked:active {
     > span {
       width: $h2 + 4px;
       margin-left: -4px;
