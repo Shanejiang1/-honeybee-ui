@@ -7,6 +7,38 @@
     <Button theme='link'>你好</Button>
     <Button theme='text'>你好</Button>
   </div>
+  <h1>示例2</h1>
+  <div>
+    <Button>你好</Button>
+    <Button size='big'>你好</Button>
+    <Button size='small'>你好</Button>
+  </div>
+  <div>
+    <Button theme='link'>你好</Button>
+    <Button theme='link' size='big'>你好</Button>
+    <Button theme='link' size='small'>你好</Button>
+  </div>
+  <div>
+    <Button theme='text'>你好</Button>
+    <Button theme='text' size='big'>你好</Button>
+    <Button theme='text' size='small'>你好</Button>
+  </div>
+  <h1>示例3</h1>
+  <div>
+    <Button level='main'>主要</Button>
+    <Button>普通</Button>
+    <Button level='danger'>危险</Button>
+  </div>
+  <div>
+    <Button theme='link' level='main'>主要</Button>
+    <Button theme='link'>普通</Button>
+    <Button theme='link' level='danger'>危险</Button>
+  </div>
+  <div>
+    <Button theme='text' level='main'>主要</Button>
+    <Button theme='text'>普通</Button>
+    <Button theme='text' level='danger'>危险</Button>
+  </div>
 </template>
 
 <script lang='ts'>
