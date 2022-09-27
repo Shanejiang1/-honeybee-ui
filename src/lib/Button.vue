@@ -2,6 +2,7 @@
   <button
     class='honeybee-button'
     :class='classes'
+    :disabled='disabled'
   >
     <slot />
   </button>
@@ -23,6 +24,10 @@ export default {
     level: {
       type: String,
       default: 'normal',
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
   setup(props) {
@@ -46,6 +51,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$grey: grey;
 .honeybee-button {
   box-sizing: border-box;
   height: $h;
@@ -160,6 +166,24 @@ $red: red;
       &:hover, &:focus {
         color: darken($red, 10%);
       }
+    }
+  }
+
+  &.honeybee-theme-button {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+
+  &.honeybee-theme-link, &.honeybee-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
     }
   }
 }

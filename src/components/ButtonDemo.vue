@@ -39,6 +39,12 @@
     <Button theme='text'>普通</Button>
     <Button theme='text' level='danger'>危险</Button>
   </div>
+  <h1>示例4</h1>
+  <div>
+    <Button disabled>禁用</Button>
+    <Button theme='link' disabled>禁用链接</Button>
+    <Button theme='text' disabled>禁用按钮</Button>
+  </div>
 </template>
 
 <script lang='ts'>
