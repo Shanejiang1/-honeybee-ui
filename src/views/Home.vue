@@ -40,12 +40,13 @@ $color: #007974;
 
 .topnavAndBanner {
   background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+  clip-path: ellipse(80% 60% at 50% 40%);
 }
 
 .features{
   > svg {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
   }
 }
 
