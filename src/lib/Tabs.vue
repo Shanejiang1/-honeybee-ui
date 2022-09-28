@@ -3,6 +3,8 @@
     <div class='honeybee-tabs-nav'>
       <div
         class='honeybee-tabs-nav-item'
+        @click='select(t)'
+        :class='{selected: t === selected}'
         v-for='(t, index) in titles'
         :key='index'
       >
@@ -12,6 +14,7 @@
     <div class='honeybee-tabs-content'>
       <component
         class='honeybee-tabs-content-item'
+        :class='{selected: c.props.title === selected}'
         v-for='(c, index) in defaults'
         :is='c'
         :key='index'
@@ -25,6 +28,12 @@
 import Tab from './Tab.vue'
 
 export default {
+  props: {
+    selected: {
+      type: String,
+    },
+  },
+
   setup(props, context) {
     const defaults = context.slots.default()
     defaults.forEach((tag) => {
@@ -35,7 +44,10 @@ export default {
     const titles = defaults.map((tag) => {
       return tag.props.title
     })
-    return { defaults, titles }
+    const select = (title: string) => {
+      context.emit('update:selected', title)
+    }
+    return { defaults, titles,select }
   },
 }
 </script>
@@ -68,6 +80,14 @@ $border-color: #d9d9d9;
 
   &-content {
     padding: 8px 0;
+
+    &-item {
+      display: none;
+
+      &.selected {
+        display: block;
+      }
+    }
   }
 }
 </style>
