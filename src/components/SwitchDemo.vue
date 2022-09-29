@@ -4,19 +4,19 @@
     <div class='demo'>
       <h2>常规用法</h2>
       <div class='demo-component'>
-        <Switch v-model:value='bool' />
+        <SwitchDemo1 />
       </div>
       <div class='demo-actions'>
         <Button>查看代码</Button>
       </div>
       <div class='demo-code'>
-        <pre>&lt;Switch v-model:value="bool" /&gt;</pre>
+        <pre>&lt;Switch v-model:value="bool" disabled /&gt;</pre>
       </div>
     </div>
     <div class='demo'>
       <h2>支持 disabled </h2>
       <div class='demo-component'>
-        <Switch v-model:value='bool' disabled />
+        <SwitchDemo2 />
       </div>
       <div class='demo-actions'>
         <Button>查看代码</Button>
@@ -32,9 +32,14 @@
 import Switch from '../lib/Switch.vue'
 import Button from '../lib/Button.vue'
 import { ref } from 'vue';
+import SwitchDemo1 from './SwitchDemo1.vue';
+import SwitchDemo2 from './SwitchDemo2.vue';
+
 
 export default {
   components: {
+    SwitchDemo2,
+    SwitchDemo1,
     Switch,
     Button,
   },
