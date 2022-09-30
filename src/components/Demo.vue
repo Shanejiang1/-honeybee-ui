@@ -1,34 +1,53 @@
 <template>
-  <div>
-    <h1>Switch 组件示例</h1>
-    <Demo :component='SwitchDemo1'/>
-    <Demo :component='SwitchDemo2'/>
+  <div class='demo'>
+    <h2>{{ component.__sourceCodeTitle }}</h2>
+    <div class='demo-component'>
+      <component :is='component' />
+    </div>
+    <div class='demo-actions'>
+      <Button
+        @click='toggleCode'
+      >查看代码
+      </Button>
+    </div>
+    <div
+      class='demo-code'
+      v-if='codeVisible'
+    >
+        <pre
+          class='language-css'
+          v-html='html'
+        />
+    </div>
   </div>
 </template>
 
 <script lang='ts'>
 import Button from '../lib/Button.vue'
-import { ref } from 'vue';
-import SwitchDemo1 from './SwitchDemo1.vue';
-import SwitchDemo2 from './SwitchDemo2.vue';
 import 'prismjs'
 import 'prismjs/themes/prism.css'
-import Demo from './Demo.vue'
+import { computed, ref } from 'vue';
 
 const Prism = (window as any).Prism
 
 export default {
   components: {
     Button,
-    Demo
   },
-  setup() {
-    const bool = ref(false)
+  props: {
+    component: Object,
+  },
+  setup(props) {
+    const html = computed(() => {
+      return Prism.highlight(props.component.__sourceCode, Prism.languages.html, 'html')
+    })
+    const toggleCode = () => codeVisible.value = !codeVisible.value
+    const codeVisible = ref(false)
     return {
-      bool,
-      SwitchDemo1,
-      SwitchDemo2,
       Prism,
+      html,
+      codeVisible,
+      toggleCode,
     }
   },
 }
