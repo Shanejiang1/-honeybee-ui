@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-$color: #007974;
+$color: #242526;
 
 .topnav {
   color: $color;

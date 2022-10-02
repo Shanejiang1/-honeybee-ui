@@ -4,10 +4,10 @@
       <Topnav />
       <div class='banner'>
         <h1>蜜蜂UI</h1>
-        <h2>一个厉害的 UI 框架</h2>
+        <h2>一个 Vue 3 的 UI 框架</h2>
         <p class='actions'>
-          <a href='https://github.com'>GitHub</a>
-          <router-link to='/doc'>开始</router-link>
+          <router-link to='/doc'>开始使用</router-link>
+          <a href='https://github.com' class='actions-git'>GitHub</a>
         </p>
       </div>
     </div>
@@ -54,12 +54,13 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-$green: #02bcb0;
-$border-radius: 4px;
-$color: #007974;
+$green: #0170fe;
+$border-radius: 24px;
+$color: #1a2b3b;
 
 .topnavAndBanner {
-  background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
+  background-color: #f2f9ff;
+  //background: linear-gradient(145deg, rgba(227, 255, 253, 1) 0%, rgba(183, 233, 230, 1) 100%);
   clip-path: ellipse(80% 60% at 50% 40%);
 }
 
@@ -130,7 +131,15 @@ $color: #007974;
   > .actions {
     padding: 8px 0;
 
+    .actions-git{
+      color: #0170fe;
+      background: #fafdff;
+      border-style: solid;
+      border-color: #0170fe;
+    }
+
     a {
+      border: 1px solid $green;
       margin: 0 8px;
       background: $green;
       color: #ffffff;

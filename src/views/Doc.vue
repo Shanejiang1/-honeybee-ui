@@ -26,23 +26,23 @@
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to='/doc/switch'>
-              Switch 组件
-            </router-link>
-          </li>
-          <li>
             <router-link to='/doc/button'>
-              Button 组件
+              Button 按钮
             </router-link>
           </li>
           <li>
-            <router-link to='/doc/dialog'>
-              Dialog 组件
+            <router-link to='/doc/switch'>
+              Switch 开关
             </router-link>
           </li>
           <li>
             <router-link to='/doc/tabs'>
-              Tabs 组件
+              Tabs 标签页
+            </router-link>
+          </li>
+          <li>
+            <router-link to='/doc/dialog'>
+              Dialog 对话框
             </router-link>
           </li>
         </ol>
@@ -104,7 +104,7 @@ $aside-index: 10;
 }
 
 aside {
-  background: lightblue;
+  background: #ffffff;
   width: 150px;
   padding: 16px 0;
   position: fixed;
@@ -113,6 +113,7 @@ aside {
   padding-top: 70px;
   height: 100%;
   z-index: $aside-index;
+  border-right: 1px solid #f0f0f0;
 
   > h2 {
     margin-bottom: 4px;
@@ -127,7 +128,8 @@ aside {
         text-decoration: none;
       }
       .router-link-active {
-        background: #ffffff;
+        background: #e6f7ff;
+        color: #1890ff;
       }
     }
   }

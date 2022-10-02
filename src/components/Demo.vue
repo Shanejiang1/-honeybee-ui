@@ -9,13 +9,13 @@
         @click='hideCode'
         v-if='codeVisible'
       >
-        隐藏代码
+        收起代码
       </Button>
       <Button
         @click='showCode'
         v-else
       >
-        查看代码
+        显示代码
       </Button>
 
     </div>
