@@ -1,19 +1,18 @@
 <demo>
-常规使用
+基本用法
 </demo>
 
 <template>
   <div>
-    <Button @click='toggle'>打开对话框</Button>
+    <Button @click='toggle' level='main'>打开对话框</Button>
     <Dialog
-      v-model:visible='x'
+      v-model:visible='visibleDialog'
       :closeOnClickOverlay='false'
-      :ok='f1'
-      :cancel='f2'
     >
       <template v-slot:content>
-        <strong>hi</strong>
-        <div>hi2</div>
+        <div>对话框的内容...</div>
+        <div>对话框的内容...</div>
+        <div>对话框的内容...</div>
       </template>
       <template v-slot:title>
         <strong>标题</strong>
@@ -30,16 +29,11 @@ import { ref } from 'vue';
 export default {
   components: { Button, Dialog },
   setup() {
-    const x = ref(false)
+    const visibleDialog = ref(false)
     const toggle = () => {
-      x.value = !x.value
+      visibleDialog.value = !visibleDialog.value
     }
-    const f1 = () => {
-      return false
-    }
-    const f2 = () => {
-    }
-    return { x, toggle, f1, f2 }
+    return { visibleDialog, toggle }
   },
 }
 </script>

@@ -4,8 +4,8 @@
 
 <template>
   <div>
-    <Button loading>加载中</Button>
-    <Button size="small" loading>加载中</Button>
+    <Button loading level='loading'>加载中</Button>
+    <Button size="small" loading level='loading'>加载中</Button>
   </div>
 </template>
 

@@ -54,11 +54,11 @@ export default {
 <style lang='scss'>
 $h: 32px;
 $border-color: #d9d9d9;
-$color: #333;
-$blue: #40a9ff;
+$color: #000000d9;
+$blue: #1890ff;
 $radius: 4px;
 $red: #ff4d4f;
-$grey: grey;
+$grey: #b8b8b8;
 .honeybee-button {
   box-sizing: border-box;
   height: $h;
@@ -80,8 +80,8 @@ $grey: grey;
   }
 
   &:hover, &:focus {
-    color: $blue;
-    border-color: $blue;
+    color: #40a9ff;
+    border-color: #40a9ff;
   }
 
   &:focus {
@@ -98,7 +98,7 @@ $grey: grey;
     color: $blue;
 
     &:hover, &:focus {
-      color: lighten($blue, 10%);
+      color: #40a9ff;
     }
   }
 
@@ -108,7 +108,7 @@ $grey: grey;
     color: inherit;
 
     &:hover, &:focus {
-      background: darken(white, 5%);
+      background: #fafafa;
     }
   }
 
@@ -125,14 +125,25 @@ $grey: grey;
   }
 
   &.honeybee-theme-button {
+    &.honeybee-level-loading {
+      background: #69b7ff;
+      color: #ffffff;
+      border-color: #69b7ff;
+
+      &:hover, &:focus {
+        background: #83c7ff;
+        border-color: #83c7ff;
+      }
+    }
+
     &.honeybee-level-main {
       background: $blue;
       color: #ffffff;
       border-color: $blue;
 
       &:hover, &:focus {
-        background: darken($blue, 10%);
-        border-color: darken($blue, 10%);
+        background: #40a9ff;
+        border-color: #40a9ff;
       }
     }
 
@@ -142,8 +153,8 @@ $grey: grey;
       color: #ffffff;
 
       &:hover, &:focus {
-        background: darken($red, 10%);
-        border-color: darken($red, 10%);
+        background: #ff7875;
+        border-color: #ff7875;
       }
     }
   }
@@ -153,7 +164,7 @@ $grey: grey;
       color: $red;
 
       &:hover, &:focus {
-        color: darken($red, 10%);
+        color: #ff7875;
       }
     }
   }
@@ -163,7 +174,7 @@ $grey: grey;
       color: $blue;
 
       &:hover, &:focus {
-        color: darken($blue, 10%);
+        color: #40a9ff;
       }
     }
 
@@ -171,7 +182,7 @@ $grey: grey;
       color: $red;
 
       &:hover, &:focus {
-        color: darken($red, 10%);
+        color: #ff7875;
       }
     }
   }
@@ -180,9 +191,10 @@ $grey: grey;
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
+      background: #f5f5f5;
 
       &:hover {
-        border-color: $grey;
+        border-color: #d9d9d9;
       }
     }
   }
@@ -200,7 +212,7 @@ $grey: grey;
     display: inline-block;
     margin-right: 4px;
     border-radius: 8px;
-    border-color: $blue $blue $blue transparent;
+    border-color: #ffffff #ffffff #ffffff transparent;
     border-style: solid;
     border-width: 2px;
     animation: honeybee-spin 1s infinite linear;

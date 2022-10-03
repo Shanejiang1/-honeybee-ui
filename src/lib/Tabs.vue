@@ -85,9 +85,9 @@ export default {
 </script>
 
 <style lang='scss'>
-$blue: #40a9ff;
-$color: #333;
-$border-color: #d9d9d9;
+$blue: #1890ff;
+$color: #262626;
+$border-color: #f0f0f0;
 
 .honeybee-tabs {
   &-nav {

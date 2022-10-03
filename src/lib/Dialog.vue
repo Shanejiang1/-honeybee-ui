@@ -17,13 +17,13 @@
           </main>
           <footer>
             <Button
+              @click='cancel'
+            >Cancel
+            </Button>
+            <Button
               level='main'
               @click='ok'
             >OK
-            </Button>
-            <Button
-              @click='cancel'
-            >Cancel
             </Button>
           </footer>
         </div>
@@ -78,7 +78,7 @@ export default {
 
 <style lang='scss'>
 $radius: 4px;
-$border-color: #d9d9d9;
+$border-color: #f0f0f0;
 
 .honeybee-dialog {
   background: #ffffff;

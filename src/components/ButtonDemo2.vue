@@ -5,9 +5,9 @@
 <template>
  <div>
    <div>
-     <Button size="big">大按钮</Button>
-     <Button>中按钮</Button>
-     <Button size="small">小按钮</Button>
+     <Button size="big" level='main'>大按钮</Button>
+     <Button level='main'>中按钮</Button>
+     <Button size="small" level='main'>小按钮</Button>
    </div>
    <div>
      <Button theme="link" size="big">大按钮</Button>
