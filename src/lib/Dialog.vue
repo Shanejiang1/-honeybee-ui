@@ -16,14 +16,11 @@
             <slot name='content' />
           </main>
           <footer>
-            <Button
-              @click='cancel'
-            >Cancel
+            <Button @click='onClickCancel'>
+              取消
             </Button>
-            <Button
-              level='main'
-              @click='ok'
-            >OK
+            <Button @click='onClickOk' level='main'>
+              确认
             </Button>
           </footer>
         </div>
@@ -62,16 +59,16 @@ export default {
         close()
       }
     }
-    const ok = () => {
+    const onClickOk = () => {
       if (props.ok && props.ok() !== false) {
         close()
       }
     }
-    const cancel = () => {
-      props.cancel?.()
+    const onClickCancel = () => {
+      props.cancel && props.cancel()
       close()
     }
-    return { close, onClickOverlay, ok, cancel }
+    return { close, onClickOverlay, onClickOk, onClickCancel }
   },
 }
 </script>

@@ -8,6 +8,8 @@
     <Dialog
       v-model:visible='visibleDialog'
       :closeOnClickOverlay='false'
+      :ok='f1'
+      :cancel='f2'
     >
       <template v-slot:content>
         <div>对话框的内容...</div>
@@ -33,7 +35,14 @@ export default {
     const toggle = () => {
       visibleDialog.value = !visibleDialog.value
     }
-    return { visibleDialog, toggle }
+    const f1 = () => {}
+    const f2 = () => {}
+    return {
+      visibleDialog,
+      toggle,
+      f1,
+      f2,
+    }
   },
 }
 </script>

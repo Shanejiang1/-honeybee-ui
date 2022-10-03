@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    <Button @click='showDialog'>打开对话框</Button>
+    <Button @click='showDialog' level='main'>打开对话框</Button>
   </div>
 </template>
 
