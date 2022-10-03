@@ -1,11 +1,12 @@
 <demo>
-常规使用
+基础用法
 </demo>
 
 <template>
   <Tabs v-model:selected='x'>
-    <Tab title='导航1'>内容1</Tab>
-    <Tab title='导航2'>内容2</Tab>
+    <Tab title='标签 1'>标签的内容 1</Tab>
+    <Tab title='标签 2'>标签的内容 2</Tab>
+    <Tab title='标签 3'>标签的内容 3</Tab>
   </Tabs>
 </template>
 
@@ -20,7 +21,7 @@ export default {
     Tab,
   },
   setup() {
-    const x = ref('导航2')
+    const x = ref('标签 1')
     return { x }
   },
 }
