@@ -1,5 +1,5 @@
 <demo>
-支持 disabled
+失效状态 disabled
 </demo>
 
 <template>

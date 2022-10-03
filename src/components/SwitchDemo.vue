@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Switch 组件示例</h1>
+    <h1>Switch 开关</h1>
     <Demo :component='SwitchDemo1'/>
     <Demo :component='SwitchDemo2'/>
   </div>
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-$border-color: #d9d9d9;
+$border-color: #f0f0f0;
 
 .demo {
   border: 1px solid $border-color;

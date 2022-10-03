@@ -4,7 +4,7 @@
       <Topnav />
       <div class='banner'>
         <h1>蜜蜂UI</h1>
-        <h2>一个 Vue 3 的 UI 框架</h2>
+        <h2>一个基于 Vue 3 的 UI 框架</h2>
         <p class='actions'>
           <router-link to='/doc'>开始使用</router-link>
           <a href='https://github.com' class='actions-git'>GitHub</a>
