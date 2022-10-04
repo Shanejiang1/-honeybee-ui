@@ -4,4 +4,4 @@ node_modules
 *.local
 
 .idea
-.vscode!/deploy.sh
+.vscode
