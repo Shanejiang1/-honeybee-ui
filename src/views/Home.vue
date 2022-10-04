@@ -7,7 +7,12 @@
         <h2>一个基于 Vue 3 的 UI 框架</h2>
         <p class='actions'>
           <router-link to='/doc'>开始使用</router-link>
-          <a href='https://github.com' class='actions-git'>GitHub</a>
+          <a
+            href='https://github.com/Shanejiang1/honeybee-ui'
+            target='_Blank'
+            class='actions-git'>
+            GitHub
+          </a>
         </p>
       </div>
     </div>
@@ -131,7 +136,7 @@ $color: #1a2b3b;
   > .actions {
     padding: 8px 0;
 
-    .actions-git{
+    .actions-git {
       color: #0170fe;
       background: #fafdff;
       border-style: solid;
